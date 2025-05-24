@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-primary: #2563eb;
+  }
+
+  .dark {
+    --color-bg: #0d1117;
+    --color-text: #e6edf3;
+    --color-primary: #3b82f6;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    @apply transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+    margin: 0 0 0.5em;
+  }
+
+  p {
+    margin: 0 0 1em;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0s !important;
+      transition-duration: 0s !important;
+    }
+  }
+}
