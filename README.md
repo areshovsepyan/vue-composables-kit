@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Vue 3](https://img.shields.io/badge/Vue-3.x-brightgreen.svg)](https://vuejs.org/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![Edit on CodeSandbox](https://img.shields.io/badge/Live-Demo-blue?logo=codesandbox&logoColor=white)](https://codesandbox.io/p/sandbox/github/areshovsepyan/vue-composables-kit)
 </div>
 
 A growing collection of reusable Vue 3 composables written in TypeScript. Each composable is designed to solve common frontend problems with simplicity and performance — whether you're building SPAs, admin dashboards, or side projects.
