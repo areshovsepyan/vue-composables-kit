@@ -1,18 +1,24 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { routes } from '@/router';
 </script>
 
 <template>
-  <div class="p-4">
-    <h1 class="text-2xl font-bold mb-4">Vue Composables Kit Demo</h1>
+  <div class="min-h-screen bg-background text-foreground transition-colors">
+    <main class="max-w-3xl mx-auto px-4 py-12 space-y-8">
+      <h1 class="text-3xl font-bold text-center mb-6">🧩 Vue Composables Playground</h1>
 
-    <nav class="mb-6 space-x-4">
-      <RouterLink to="/clipboard">Clipboard</RouterLink>
-      <RouterLink to="/dark-mode">Dark Mode</RouterLink>
-      <RouterLink to="/debounce">Debounce</RouterLink>
-      <RouterLink to="/window-size">Window Size</RouterLink>
-      <RouterLink to="/event-listener">Event Listener</RouterLink>
-    </nav>
-    <RouterView />
+      <nav class="flex flex-wrap justify-center gap-4 mb-8">
+        <RouterLink
+          v-for="(route, index) in routes"
+          :key="index"
+          :to="route.path"
+          class="px-3 rounded-xl font-bold"
+        >
+          {{ route.name }}
+        </RouterLink>
+      </nav>
+
+      <RouterView />
+    </main>
   </div>
 </template>

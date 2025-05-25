@@ -13,7 +13,7 @@ const debounced = useDebounce(input, 500);
     <input
       v-model="input"
       type="text"
-      class="w-full px-4 py-2 rounded bg-white dark:bg-zinc-800 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-primary"
+      class="w-full px-4 py-2 rounded-xl bg-white dark:bg-zinc-800 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-primary"
       placeholder="Type something"
     />
 

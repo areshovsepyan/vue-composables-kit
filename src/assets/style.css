@@ -3,14 +3,14 @@
 @layer base {
   :root {
     --color-bg: #ffffff;
-    --color-text: #1a1a1a;
-    --color-primary: #2563eb;
+    --color-text: #052659;
+    --color-primary: #6104d6;
   }
 
   .dark {
-    --color-bg: #0d1117;
-    --color-text: #e6edf3;
-    --color-primary: #3b82f6;
+    --color-bg: var(--color-neutral-950);
+    --color-text: var(--color-white);
+    --color-primary: var(--color-purple-700);
   }
 
   *,
@@ -74,12 +74,16 @@
 
   button {
     cursor: pointer;
+    font-weight: 500;
   }
 
   a {
     color: var(--color-primary);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  }
+
+  .router-link-active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
 
   :focus-visible {

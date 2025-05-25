@@ -1,20 +1,36 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import ClipboardView from '../views/ClipboardView.vue';
-import DarkModeView from '../views/DarkModeView.vue';
-import DebounceView from '../views/DebounceView.vue';
-import WindowSizeView from '../views/WindowSizeView.vue';
-import EventListenerView from '../views/EventListenerView.vue';
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+
+export const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    name: 'Clipboard',
+    component: () => import('@/views/ClipboardView.vue'),
+  },
+  {
+    path: '/dark-mode',
+    name: 'Dark Mode',
+    component: () => import('@/views/DarkModeView.vue'),
+  },
+  {
+    path: '/debounce',
+    name: 'Debounce',
+    component: () => import('@/views/DebounceView.vue'),
+  },
+  {
+    path: '/window-size',
+    name: 'Window Size',
+    component: () => import('@/views/WindowSizeView.vue'),
+  },
+  {
+    path: '/event-listener',
+    name: 'Event Listener',
+    component: () => import('@/views/EventListenerView.vue'),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    { path: '/', redirect: '/clipboard' },
-    { path: '/clipboard', component: ClipboardView },
-    { path: '/dark-mode', component: DarkModeView },
-    { path: '/debounce', component: DebounceView },
-    { path: '/window-size', component: WindowSizeView },
-    { path: '/event-listener', component: EventListenerView },
-  ],
+  routes,
 });
 
 export default router;
